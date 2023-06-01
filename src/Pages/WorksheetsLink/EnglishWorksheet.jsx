@@ -1,24 +1,10 @@
 import React from 'react';
-import background from '../../images/link1.JPG'
 
-import { Link } from 'react-router-dom';
-const Academics = () => {
+const EnglishWorksheet = () => {
     return (
         <div>
-            <div
-                className="hero h-[500px]"
-                style={{ backgroundImage: `url(${background})` }}
-            >
-                <div className="hero-overlay bg-opacity-60"></div>
-                <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Academic links</h1>
-                        {/* <button className="btn btn-primary">Get Started</button> */}
-                    </div>
-                </div>
-            </div>
-
-            <div className="mt-20 mx-auto max-w-md mb-40 text-center">
+            <h1 className='text-3xl text-center font-bold mt-10 ps-24'>English Worksheets</h1>
+            <div className="mt-10 mx-auto max-w-md mb-40 text-center">
                 <table className="table table-zebra w-full border inline-block">
                     <thead>
                         <tr>
@@ -29,13 +15,13 @@ const Academics = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td className="border px-4 py-2 font-bold">Disturbing students</td>
+                            <td className="border px-4 py-2 font-bold">C1 worsheets </td>
                             <td className="border px-4 py-2">
-                                Disturbing student list
+                                you will get worksheet of C1 English in this link
                             </td>
                             <td className="border px-4 py-2">
 
-                                <a href="https://docs.google.com/document/d/1LbhdNQj0YPHVLGbU5qpcKcw48muCkOji/edit
+                                <a href="https://drive.google.com/drive/u/0/folders/1XWPKhh6AFJucpFWqZfDTso9Y_rio_UWi
 
 
 " target="_blank" rel="noopener noreferrer"> <button className="btn text-black bg-green-400 hover:bg-green-500">Click here</button></a>
@@ -45,28 +31,13 @@ const Academics = () => {
 
 
                         <tr>
-                            <td className="border px-4 py-2 font-bold">Marks input tutorial</td>
+                            <td className="border px-4 py-2 font-bold">C2 worsheets </td>
                             <td className="border px-4 py-2">
-                                Marks input tutorial from IT
+                                you will get worksheet of C2 science in this link
                             </td>
                             <td className="border px-4 py-2">
 
-                                <a href="https://drive.google.com/file/d/1b5DqFEXPrPib67j0wjzFV_BvuitnQibE/view?usp=sharing
-
-
-" target="_blank" rel="noopener noreferrer"> <button className="btn text-black bg-green-400 hover:bg-green-500">Click here</button></a>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td className="border px-4 py-2 font-bold">MN logo</td>
-                            <td className="border px-4 py-2">
-                                Marks input tutorial from IT
-                            </td>
-                            <td className="border px-4 py-2">
-
-                                <a href="https://drive.google.com/file/d/1b5DqFEXPrPib67j0wjzFV_BvuitnQibE/view?usp=sharing
+                                <a href="https://drive.google.com/drive/u/0/folders/1XWPKhh6AFJucpFWqZfDTso9Y_rio_UWi
 
 
 " target="_blank" rel="noopener noreferrer"> <button className="btn text-black bg-green-400 hover:bg-green-500">Click here</button></a>
@@ -76,13 +47,45 @@ const Academics = () => {
 
 
                         <tr>
-                            <td className="border px-4 py-2 font-bold">Students info</td>
+                            <td className="border px-4 py-2 font-bold">C3 worsheets </td>
                             <td className="border px-4 py-2">
-                                Info of all the MN students
+                                you will get worksheet of C3 science in this link
                             </td>
                             <td className="border px-4 py-2">
 
-                                <a href="https://drive.google.com/file/d/1b5DqFEXPrPib67j0wjzFV_BvuitnQibE/view?usp=sharing
+                                <a href="https://drive.google.com/drive/u/0/folders/1XWPKhh6AFJucpFWqZfDTso9Y_rio_UWi
+
+
+" target="_blank" rel="noopener noreferrer"> <button className="btn text-black bg-green-400 hover:bg-green-500">Click here</button></a>
+
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td className="border px-4 py-2 font-bold">C4 worsheets </td>
+                            <td className="border px-4 py-2">
+                                you will get worksheet of C4 science in this link
+                            </td>
+                            <td className="border px-4 py-2">
+
+                                <a href="https://drive.google.com/drive/u/0/folders/1XWPKhh6AFJucpFWqZfDTso9Y_rio_UWi
+
+
+" target="_blank" rel="noopener noreferrer"> <button className="btn text-black bg-green-400 hover:bg-green-500">Click here</button></a>
+
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td className="border px-4 py-2 font-bold">C5 worsheets </td>
+                            <td className="border px-4 py-2">
+                                you will get worksheet of C5 science in this link
+                            </td>
+                            <td className="border px-4 py-2">
+
+                                <a href="https://drive.google.com/drive/u/0/folders/1XWPKhh6AFJucpFWqZfDTso9Y_rio_UWi
 
 
 " target="_blank" rel="noopener noreferrer"> <button className="btn text-black bg-green-400 hover:bg-green-500">Click here</button></a>
@@ -91,29 +94,36 @@ const Academics = () => {
                         </tr>
 
                         <tr>
-                            <td className="border px-4 py-2 font-bold">Early Leave</td>
+                            <td className="border px-4 py-2 font-bold">M1 worsheets </td>
                             <td className="border px-4 py-2">
-                                Application for early leave. Edit it based on your need
+                                you will get worksheet of M1 science in this link
                             </td>
                             <td className="border px-4 py-2">
-                                <a href="https://drive.google.com/file/d/1b5DqFEXPrPib67j0wjzFV_BvuitnQibE/view?usp=sharing
+
+                                <a href="https://drive.google.com/drive/u/0/folders/1XWPKhh6AFJucpFWqZfDTso9Y_rio_UWi
 
 
 " target="_blank" rel="noopener noreferrer"> <button className="btn text-black bg-green-400 hover:bg-green-500">Click here</button></a>
+
                             </td>
                         </tr>
+
+
                         <tr>
-                            <td className="border px-4 py-2 font-bold">Leave</td>
+                            <td className="border px-4 py-2 font-bold">M2 worsheets </td>
                             <td className="border px-4 py-2">
-                                Application for leave. Edit it based on your need
+                                you will get worksheet of M2 science in this link
                             </td>
                             <td className="border px-4 py-2">
-                                <a href="https://drive.google.com/file/d/1b5DqFEXPrPib67j0wjzFV_BvuitnQibE/view?usp=sharing
+
+                                <a href="https://drive.google.com/drive/u/0/folders/1XWPKhh6AFJucpFWqZfDTso9Y_rio_UWi
 
 
 " target="_blank" rel="noopener noreferrer"> <button className="btn text-black bg-green-400 hover:bg-green-500">Click here</button></a>
+
                             </td>
                         </tr>
+
 
 
 
@@ -121,11 +131,8 @@ const Academics = () => {
                     </tbody>
                 </table>
             </div>
-
-
-
         </div>
     );
 };
 
-export default Academics;
+export default EnglishWorksheet;

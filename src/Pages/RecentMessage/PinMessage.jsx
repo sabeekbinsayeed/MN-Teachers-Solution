@@ -7,25 +7,15 @@ import { toast } from 'react-hot-toast';
 
 
 
-const RecentMessage = ({ value }) => {
-    const defaultValue = 'all'; // Set your desired default value here
+const RecentMessage = () => {
+
 
     // Check if a value is provided, otherwise use the default value
-    const selectedValue = value ? value : defaultValue;
 
     const { user } = useContext(AuthContext);
 
 
-    const [deletingMessage, setDeletingMessage] = useState(null);
 
-    const closeModal = () => {
-        setDeletingMessage(null);
-    }
-
-    // const [message, setMessage] = useState(null);
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/message`).then(res => res.json()).then(data => { setMessage(data), console.log(data) })
-    // }, [])
 
 
 
@@ -33,10 +23,8 @@ const RecentMessage = ({ value }) => {
         queryKey: ['message'],
         queryFn: async () => {
             try {
-                const res = await fetch(`http://localhost:5000/message?department=${selectedValue}`, {
-                    // headers: {
-                    //     authorization: `bearer ${localStorage.getItem('accessToken')}`
-                    // }
+                const res = await fetch(`http://localhost:5000/pinmessage`, {
+
                 });
                 const data = await res.json();
                 return data;
@@ -53,64 +41,8 @@ const RecentMessage = ({ value }) => {
     }
 
 
-    let lastElement = null;
-    if (message) {
-        console.log(message)
 
 
-        lastElement = message[message.length - 1];
-        // console.log(lastElement.messages);
-    }
-
-
-    const handleDelete = mes => {
-        console.log('dhukse ', mes)
-        fetch(`http://localhost:5000/message/${mes._id}`, {
-            method: 'DELETE',
-            headers: {
-                authorization: `bearer ${localStorage.getItem('accessToken')}`
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-
-                    // alert('done')
-                    refetch();
-                    toast.success(`Deleted successfully`)
-                }
-            })
-    }
-
-
-    const handlePin = mes => {
-
-
-
-        const result = mes;
-        console.log('result ', result);
-
-        fetch('http://localhost:5000/pinmessage', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(result)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.acknowledged) {
-                    // alert('recent added');
-                    toast.success('done successfully')
-                    // form.reset(); // Reset the form to clear the input fields
-                } else {
-                    toast.error(data.message);
-                    alert('cannot do it');
-                }
-            });
-
-    }
 
     console.log('message ', message)
 
@@ -118,6 +50,7 @@ const RecentMessage = ({ value }) => {
     return (
         <div className='mb-20'>
             <div>
+                <h1 className='text-3xl font-bold text-center text-green-600 ms-14 mt-20 me-14'>Reminder</h1>
 
                 {/* <h1>temporary</h1> */}
                 {/* <h1>Last Element {lastElement?.messages}</h1> */}
@@ -125,7 +58,7 @@ const RecentMessage = ({ value }) => {
                 {
                     message &&
                     message.slice().reverse().map((mes) => (
-                        <div className="flex items-center flex-col justify-start bg-gray-100 p-6 rounded-lg w-70vw min-w-70 mt-12">
+                        <div className="flex items-center flex-col justify-start  p-6 rounded-lg w-70vw min-w-70 mt-12">
                             <div className="flex flex-col items-center mb-10">
                                 <img
                                     className="w-16 h-16 rounded-full mb-2"
@@ -159,10 +92,7 @@ const RecentMessage = ({ value }) => {
                                             >
                                                 delete
                                             </button> */}
-                                            <label
-                                                onClick={() => handlePin(mes)} htmlFor="my-modal" className="mt-4 btn btn-success me-2 ps-2">Pin </label>
-                                            <label
-                                                onClick={() => setDeletingMessage(mes)} htmlFor="my-modal" className="mt-4 btn btn-error">Delete</label>
+
 
 
 
@@ -184,17 +114,7 @@ const RecentMessage = ({ value }) => {
 
 
             </div>
-            {
-                deletingMessage && <ConfirmationModel
-                    title={`Are you sure you want to delete?`}
-                    message={`If you delete it. It cannot be undone.`}
-                    successAction={handleDelete}
-                    successButtonName="Delete"
-                    modalData={deletingMessage}
-                    closeModal={closeModal}
-                >
-                </ConfirmationModel>
-            }
+
         </div>
     );
 };

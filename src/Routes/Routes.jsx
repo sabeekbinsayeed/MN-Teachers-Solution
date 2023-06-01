@@ -16,6 +16,14 @@ import ScienceSyllabusButton from "../Pages/Syllabus/ScienceSyllabusButton";
 import RecentMessage from "../Pages/RecentMessage/RecentMessage";
 import RecentMessageform from "../Pages/RecentMessage/RecentMessageform";
 import EnglishSyllabusButton from "../Pages/Syllabus/EnglishSyllabusButton";
+import YourSubject from "../Pages/YourSubject/YourSubject";
+import PrivateRoute from "./PrivateRoute";
+import ScienceWorksheet from "../Pages/WorksheetsLink/ScienceWorksheet";
+import EnglishWorksheet from "../Pages/WorksheetsLink/EnglishWorksheet";
+import SubjectAdd from "../Pages/SubjectAdd/SubjectAdd";
+import TableData from "../Pages/SubjectAdd/TableData";
+import ScienceLessonPlan from "../Pages/SubjectAdd/ScienceLessonPlan";
+import EnglishLessonPlan from "../Pages/SubjectAdd/EnglishLessonPlan";
 
 
 
@@ -66,28 +74,92 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addclass',
-                element: <AddClass></AddClass>
+                element: <PrivateRoute><AddClass></AddClass></PrivateRoute>
             },
             {
                 path: '/yourclass',
-                element: <YourClass></YourClass>
+                element: <PrivateRoute><YourClass></YourClass></PrivateRoute>
             },
             {
                 path: '/sciencesyllabusbutton',
                 element: <ScienceSyllabusButton></ScienceSyllabusButton>
             },
             {
+                path: 'yoursubject/sciencesyllabusbutton',
+                element: <ScienceSyllabusButton></ScienceSyllabusButton>
+            },
+            {
+                path: 'yoursubject/englishsyllabusbutton',
+                element: <EnglishSyllabusButton></EnglishSyllabusButton>
+            },
+            {
+                path: 'yoursubject/scienceworksheetlink',
+                element: <ScienceWorksheet></ScienceWorksheet>
+            },
+            {
+                path: 'yoursubject/englishworksheetlink',
+                element: <EnglishWorksheet></EnglishWorksheet>
+            },
+
+            {
+                path: 'yoursubject/sciencelessonplan',
+                element: <ScienceLessonPlan></ScienceLessonPlan>
+            },
+            {
+                path: 'yoursubject/englishlessonplan',
+                element: <EnglishLessonPlan></EnglishLessonPlan>
+            },
+
+            {
                 path: '/englishsyllabusbutton',
                 element: <EnglishSyllabusButton></EnglishSyllabusButton>
             },
             {
                 path: '/recentmessage',
-                element: <RecentMessage></RecentMessage>
+                element: <PrivateRoute><RecentMessage></RecentMessage></PrivateRoute>
             },
             {
                 path: '/recentformmessage',
-                element: <RecentMessageform></RecentMessageform>
+                element: <PrivateRoute><RecentMessageform></RecentMessageform></PrivateRoute>
             },
+            {
+                path: '/yoursubject',
+                element: <PrivateRoute><YourSubject></YourSubject></PrivateRoute>
+            },
+            {
+                path: '/scienceworksheetlink',
+                element: <ScienceWorksheet></ScienceWorksheet>
+            },
+            {
+                path: '/englishworksheetlink',
+                element: <EnglishWorksheet></EnglishWorksheet>
+            },
+            {
+                path: '/yoursubject',
+                element: <PrivateRoute><YourSubject></YourSubject></PrivateRoute>
+            },
+
+            {
+                path: '/subjectadd',
+                element: <PrivateRoute><SubjectAdd></SubjectAdd></PrivateRoute>
+            },
+            {
+                path: '/tabledata',
+                element: <PrivateRoute><TableData></TableData></PrivateRoute>
+            },
+            {
+                path: '/sciencelessonplan',
+                element: <PrivateRoute><ScienceLessonPlan></ScienceLessonPlan></PrivateRoute>
+            },
+            {
+                path: '/englishlessonplan',
+                element: <PrivateRoute><EnglishLessonPlan></EnglishLessonPlan></PrivateRoute>
+            },
+
+            // {
+            //     path: '/sciencelesonplan',
+            //     element: <PrivateRoute><ScienceLessonPlan></ScienceLessonPlan></PrivateRoute>
+            // },
 
 
 

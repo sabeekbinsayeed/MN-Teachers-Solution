@@ -23,16 +23,17 @@ const Links = () => {
         },
         {
             id: 3,
-            name: 'Applications',
-            description: 'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
-            img: link3
-        },
-        {
-            id: 4,
-            name: 'Class Test',
+            name: 'Lesson Plan',
             description: 'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
             img: link4
         },
+        {
+            id: 4,
+            name: 'Worksheets',
+            description: 'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
+            img: link3
+        },
+
         {
             id: 5,
             name: 'syllabus, book List',
@@ -47,12 +48,15 @@ const Links = () => {
         },
     ]
     return (
-        <div className='grid lg:grid-cols-3 mt-16'>
-            {
-                linksData.map(linksingle => <LinkSingle linksingle={linksingle}></LinkSingle>)
-            }
+        <div>
+            <h1 className='text-3xl font-bold text-center text-green-600 mt-16 me-14'>Resources</h1>
+            <div className='grid lg:grid-cols-3 mt-6'>
+                {
+                    linksData.map(linksingle => <LinkSingle linksingle={linksingle}></LinkSingle>)
+                }
 
 
+            </div>
         </div>
     );
 };

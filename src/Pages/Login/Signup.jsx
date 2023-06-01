@@ -5,13 +5,16 @@ import { AuthContext } from '../../contexts/UserContext';
 
 const Signup = () => {
     const [error, setError] = useState(null);
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
     const navigate = useNavigate();
+
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
+        const subject = form.subject.value;
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.confirm.value;
@@ -30,24 +33,37 @@ const Signup = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                const userInfo = {
+                    displayName: subject
+                }
+                updateUser(userInfo)
+                    .then(() => {
+                        // saveUser(data.name, data.email);
+                    })
+                    .catch(err => console.log(err));
+                navigate('/');
                 form.reset();
-                navigate('/')
+
             })
             .catch(error => console.error(error));
 
     }
     return (
-        <div className='flex'>
+        <div className='flex mb-15 min-h-screen '>
             <div className='w-2/3'>
                 <img src={img} alt="" />
 
             </div>
-            <div className='form-container'>
-                <h2 className='form-title text-green-700 pt-10'>Sign up</h2>
+            <div className='form-container '>
+                <h2 className='form-title text-green-700 pt-4'>Sign up</h2>
                 <form onSubmit={handleSubmit}>
-                    <div className="form-control mt-10">
+                    <div className="form-control mt-6">
                         <label htmlFor="name">Name initial</label>
                         <input type="text" name="Name" required />
+                    </div>
+                    <div className="form-control mt-6">
+                        <label htmlFor="name">Subject</label>
+                        <input type="text" name="subject" required />
                     </div>
                     <div className="form-control">
                         <label htmlFor="email">Email</label>

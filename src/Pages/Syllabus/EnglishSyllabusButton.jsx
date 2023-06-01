@@ -53,6 +53,7 @@ const EnglishSyllabusButton = () => {
 
     return (
         <div className="flex flex-col items-center mt-12">
+            <h1 className='text-2xl text-center mb-6 font-bold'>English Syllabus</h1>
             <div className="flex flex-wrap justify-center">
                 <button className="btn btn-success me-3" onClick={() => handleButtonClick(1)}>
                     C1
